@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block content %}
+	
+	<p class="title">Admin Panel</p>
+	
+	<hr>
+	<br>
+	<br>
+	<br>
+	<p class="title">Help data</p>
+
+	<div class="help-data">
+		
+		{% for data in help_data %}
+			<p class="help data">Latitude : {{data['lat']}} <br> 
+								 Longitude : {{data['long']}} <br>
+								 Time : {{data['time']}} <br>
+			</p>	<hr> 
+		{% endfor %}
+
+	</div>
+
+	<hr>
+	<br>
+	<br>
+	<br>
+	<p class="title">PDNA data</p>
+
+
+	<div class="pdna-data">
+		{% for data in pdna_data %}
+			<p class="pdna data">Q1 : {{data['q0']}} <br> 
+								 Q2 : {{data['q1']}} <br>
+								 Q3 : {{data['q2']}} <br>
+								 Q4 : {{data['q3']}} <br>
+								 Q5 : {{data['q4']}} <br>
+								 Q6 : {{data['q5']}} <br>
+								 Q7 : {{data['q6']}} <br>
+								 Q8 : {{data['q7']}} <br>
+								 Q9 : {{data['q8']}} <br>
+								 Q10 : {{data['q9']}} <br>
+								 Q11 : {{data['q10']}} <br>
+								 Q12 : {{data['q11']}} <br>
+								 Q13 : {{data['q12']}} <br>
+								 Q14 : {{data['q13']}} <br>
+								 Q15 : {{data['q14']}} <br>
+
+			</p>	<hr> 
+		{% endfor %}
+	</div>
+
+{% endblock %}

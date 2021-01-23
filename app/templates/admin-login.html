@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+	
+	<p class="title">Admin Panel</p>
+	
+	<form action="{{url_for('admin_auth')}}" method="post" class="admin-login">
+		<input type="text" placeholder="username" name="username" required />
+		<input type="pass" placeholder="password" name="password" required />
+		<button>Login</button>
+	</form>
+
+{% endblock %}
